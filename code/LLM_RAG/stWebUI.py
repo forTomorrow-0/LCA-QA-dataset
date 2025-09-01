@@ -117,7 +117,7 @@ class LCAChat:
         openai_base = os.getenv("OPENAI_API_BASE")
         
         if dashscope_key:
-            return ChatTongyi(streaming=True, model='qwen-max')
+            return ChatTongyi(streaming=True, model='qwen1.5-72b')
         elif openai_key:
             return ChatOpenAI(
                 model=os.getenv("OPENAI_MODEL", "gpt-3.5-turbo"),
